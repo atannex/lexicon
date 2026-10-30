@@ -1,5 +1,17 @@
 # Atannex Lexicon
 
-A dictionary engine for Laravel that works for any human language, including tonal, minority and endangered ones. It handles languages, varieties, orthographies, lexemes with several forms and senses, definitions in any language, sources and attestations, and Unicode-exact, tone-aware search.
+A dictionary engine for Laravel that works for any human language, including tonal, minority and endangered ones. It stores languages and their dialects and writing systems, words with their different forms and meanings, definitions in any language, and where each entry came from. Its search respects every accent and tone mark exactly. It was first built for the languages of Lebialem Division, Cameroon, but nothing in it is tied to one language.
 
-It was first built to document the languages of Lebialem Division, Cameroon (Nweh, Mundani, M'mouck, M'Mock), but nothing in the engine is specific to them, to Cameroon or to English.
+## Install
+
+```bash
+composer require atannex/lexicon
+```
+
+## Documentation
+
+The full guide is in [docs/overview.md](docs/overview.md).
+
+## License
+
+MIT.
