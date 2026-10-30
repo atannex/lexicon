@@ -1,0 +1,90 @@
+{
+    "name": "atannex/lexicon",
+    "description": "Universal lexicographic engine for Laravel: languages, varieties, orthographies, lexemes, forms, senses, multilingual definitions, provenance and Unicode-exact, tone-aware search for any human language.",
+    "keywords": [
+        "laravel",
+        "dictionary",
+        "lexicon",
+        "lexicography",
+        "language-documentation",
+        "indigenous-languages",
+        "endangered-languages",
+        "tonal-languages",
+        "unicode"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/atannex/lexicon",
+    "authors": [
+        {
+            "name": "Atangageih Leke Collins",
+            "email": "atangageihlekecollins@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/atannex/lexicon/issues",
+        "source": "https://github.com/atannex/lexicon"
+    },
+    "require": {
+        "php": "^8.3",
+        "ext-intl": "*",
+        "ext-mbstring": "*",
+        "illuminate/console": "^12.0|^13.0",
+        "illuminate/contracts": "^12.0|^13.0",
+        "illuminate/database": "^12.0|^13.0",
+        "illuminate/events": "^12.0|^13.0",
+        "illuminate/http": "^12.0|^13.0",
+        "illuminate/pagination": "^12.0|^13.0",
+        "illuminate/routing": "^12.0|^13.0",
+        "illuminate/support": "^12.0|^13.0",
+        "illuminate/validation": "^12.0|^13.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.18",
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^3.7|^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Atannex\\Lexicon\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Atannex\\Lexicon\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Atannex\\Lexicon\\LexiconServiceProvider"
+            ],
+            "aliases": {
+                "Lexicon": "Atannex\\Lexicon\\Facades\\Lexicon"
+            }
+        },
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "analyse": "phpstan analyse --memory-limit=1G",
+        "format": "pint",
+        "check": [
+            "@composer validate --strict",
+            "pint --test",
+            "@analyse",
+            "@test"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
