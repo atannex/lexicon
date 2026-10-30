@@ -7,11 +7,3 @@ A dictionary engine for Laravel that works for any human language, including ton
 ```bash
 composer require atannex/lexicon
 ```
-
-## Documentation
-
-The full guide is in [docs/overview.md](docs/overview.md).
-
-## License
-
-MIT.
